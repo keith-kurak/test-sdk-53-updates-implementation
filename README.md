@@ -1,10 +1,10 @@
 # Minimal reproduction of an EAS Update setup
 
-Use this repo as a starting point to copy a customer's EAS Update implementation into a small, clean project. The goal is a project that has the same package versions, the same update configuration, and the same `expo-updates` code as the customer's app, and nothing else.
+Use this repo as a starting point to copy your EAS Update implementation into a small, clean project. The goal is a project that has the same package versions, the same update configuration, and the same `expo-updates` code as the your app, and nothing else.
 
 This project starts from the default `create-expo-app` template for **Expo SDK 53**, and uses **npm** (`package-lock.json`).
 
-> Expo changes between SDK versions. Always use the docs for the customer's SDK version:
+> Expo changes between SDK versions. Always use the docs for your SDK version:
 > `https://docs.expo.dev/versions/v<major>.0.0/sdk/updates/`
 
 ## What you need from the customer
@@ -17,9 +17,9 @@ Collect these items before you start:
 - `eas.json`, only if they build with EAS Build
 - All files that import `expo-updates` (search for `expo-updates` in the project)
 - Config plugins that change update behavior (local plugins in the repo, or third-party plugins)
-- If they do not use Continuous Native Generation: the update keys in `ios/<App>/Supporting/Expo.plist` and `android/app/src/main/AndroidManifest.xml`
+- If you do not use Continuous Native Generation: the update keys in `ios/<App>/Supporting/Expo.plist` and `android/app/src/main/AndroidManifest.xml`
 - Build scripts that change update settings during the build (for example, a CI step that writes `expo-channel-name` into `Expo.plist` or `AndroidManifest.xml`)
-- The exact EAS CLI version and the commands they use to publish updates
+- The exact EAS CLI version and the commands you use to publish updates
 
 ## Step 1: Set the package versions to the exact versions of the customer's app
 
