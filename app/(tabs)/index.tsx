@@ -1,4 +1,5 @@
 import { Image } from 'expo-image';
+import * as Updates from 'expo-updates';
 import { Platform, StyleSheet } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
@@ -19,6 +20,15 @@ export default function HomeScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
+      </ThemedView>
+      <ThemedView>
+        {/* Change the Message text each time you publish an update. */}
+        <ThemedText>Message: Update 1</ThemedText>
+        <ThemedText>Channel: {Updates.channel ?? 'none'}</ThemedText>
+        <ThemedText>Runtime version: {Updates.runtimeVersion ?? 'none'}</ThemedText>
+        <ThemedText>Update ID: {Updates.updateId ?? 'none'}</ThemedText>
+        <ThemedText>Embedded launch: {String(Updates.isEmbeddedLaunch)}</ThemedText>
+        <ThemedText>Emergency launch: {String(Updates.isEmergencyLaunch)}</ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
