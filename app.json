@@ -1,42 +1,25 @@
 {
+  "name": "test-sdk-53-updates-implementation",
+  "displayName": "test-sdk-53-updates-implementation",
   "expo": {
     "name": "test-sdk-53-updates-implementation",
-    "slug": "test-sdk-53-updates-implementation",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "testsdk53updatesimplementation",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
+    "extra": {
+      "eas": {
+        "projectId": "[projectId]"
+      }
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
+    "runtimeVersion": "4.1.171",
+    "updates": {
+      "url": "[update-url]",
+      "checkAutomatically": "NEVER"
     },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+    "requestHeaders": {
+      "expo-channel-name": "uat"
     },
+    "android": {},
+    "ios": {},
     "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ]
-    ],
-    "experiments": {
-      "typedRoutes": true
-    }
+      "expo-secure-store"
+    ]
   }
 }
